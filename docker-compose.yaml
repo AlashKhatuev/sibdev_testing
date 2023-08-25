@@ -3,6 +3,6 @@ version: '3.8'
 services:
   web:
     build: .
-    command: gunicorn --workers=3 sibdevtesting.wsgi 
+    command: gunicorn --workers=3 -b 0.0.0.0:8000 sibdevtesting.wsgi 
     ports:
       - 8000:8000
