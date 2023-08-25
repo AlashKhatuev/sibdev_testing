@@ -11,6 +11,8 @@ RUN pip install -r requirements.txt
 
 WORKDIR /app/sibdevtesting
 
+RUN python manage.py migrate
+
 EXPOSE 8000
 
 # RUN gunicorn --workers=3 sibdevtesting.wsgi 
